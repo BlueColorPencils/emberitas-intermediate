@@ -1,0 +1,26 @@
+<div class="nav">
+  <img class="logo" src="../images/emberitas_white.png">
+</div>
+
+<div class="content">
+  {{outlet}}
+</div>
+
+<h1 style={{colorStyle}}> Welcome to Ember, {{name}}
+  <form {{action "updateName" newName on="submit"}}>
+    {{input value=newName}}
+    <button type="submit">Submit</button>
+  </form>
+  <form {{action "setColor" newColor on="submit"}}>
+    <label for="new-color">What's your favorite color?</label>
+    {{input id="new-color" value=newColor}}
+    <button type="submit">Submit</button>
+  </form>
+</h1>
+
+
+<!-- <button {{action "updateName" newName}}>Submit</button> -->
+
+
+
+<!-- {{input value=newName action="updateName" on="enter"}} -->
